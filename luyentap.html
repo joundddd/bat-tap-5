@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so dau" placeholder="nhap vao de tim kiem hang">
+<button onclick="hihi()">click</button>
+<p id="ket qua"></p>
+<script>
+    let a =[
+        [25, 25, 17, 17],
+        [13, 26, 13, 12, 12],
+        [25, 12, 32, 52],
+    ];
+    let b = '';
+    let d = 1 ;
+    let c = '';
+    let dem = 0;
+    let tbc = 0;
+    let e = '';
+    let max = a[0][0]
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            if(a[i][j]> 20){
+                b +='<br>' + a[i][j];
+            }if(a[i][j] % 2 === 0 && a[i][j] > 20){
+                c += '<br>' + a[i][j];
+               d *= a[i][j];
+            }if(a[i][j]%2 !== 0 && a[i][j] > 20){
+                e +='<br>' + a[i][j];
+                tbc += a[i][j];
+                dem++
+            }if(a[i][j] > max){
+                max = a[i][j];
+            }
+        }
+    }
+    document.write('cac so lon hon 20 la:' + b)
+    document.write('<br>' + 'cac so chan hon hon 20 la:' + c + '<br>' + 'tich la:' + d);
+    document.write('<br>' + 'cac so le lon hon 20 la:' + e + '<br>' + 'tbc la:' + tbc/dem )
+    document.write('<br>' + 'so lon nhat trong mang la:' + max)
+    function hihi(){
+        let v =[
+            [25, 25, 17, 17],
+            [13, 26, 13, 12, 12],
+            [25, 12, 32, 52],
+        ];
+        let x = document.getElementById('so dau').value;
+        for (let i = 0; i < v.length; i++) {
+            for (let j = 0; j < v[i].length; j++) {
+                if(v[i][j] == x){
+                    document.getElementById('ket qua').innerHTML = ( 'so nam o hang nay:'+ '<br>' + i + ', ' + j + '<br>')
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
