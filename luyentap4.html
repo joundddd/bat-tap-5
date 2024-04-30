@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap</title>
+    <style>
+        .body.body-dark{
+            background-color: black;
+            color: white;
+        }
+        .body.body-hover  p:hover{
+            color: darkcyan;
+        }
+        body{
+            width:960px;
+            margin:0px auto;
+        }
+        h1{
+            margin-left:350px ;
+        }
+    </style>
+</head>
+<body class="body body-dark body-hover">
+<h1>35 bài tập</h1>
+bài 1: cách khai báo biến
+<p>-ta có thể khai báo biến bằng ba câu lệnh sau: let , var và const  </p><hr>
+bài 2: có mấy kiểu dữ liệu
+<p>-có 8 kiểu dữ liệu đó là:
+    <br> +string
+    <br>+number
+    <br>+boolean
+    <br>+object
+    <br>+underfiend
+    <br>+null
+    <br>+symbol
+    <br>+bglnt</p><hr>
+bài 3: làm thế nào để quy định kiểu dữ liệu cho 1 biến
+<p>để quy dịnh kiểu dữ liệu trong javascript ta dùng lệnh type script</p><hr>
+bài 4: có những cách nào in ra chữ hello
+<p>ta có một số lệnh để in ra chữ hello là: alert , document.write và console.log</p><hr>
+bài 5: có những cách nào để nhập vào biến a
+<p>có những cách để nhập giá trị a như:<br> gán trực tiếp giá trị vào a
+    <br>qua câu lệnh: +prompt
+    <br>nhập giá trị từ 1 form html (function) </p><hr>
+bài 6: in ra thẻ h1, img, a với JS
+<script>
+    document.write('<br>' + '+in ra h1 bằng js' + '<h1>' + 'h1' + '</h1>')
+    document.write('<br>' + '+in ra ảnh bằng js' + '<br>' + '<img style="width: 100px;height: 100px;" src="https://www.ruaanhgiare.vn/wp-content/uploads/2023/06/anh-ngau.jpg">')
+    document.write('<br>' + '+link ' + '<a href="https://www.google.com.vn/search?q=%E1%BA%A3nh+ng%E1%BA%A7u&udm=2#vhid=vr611bR-IjycKM&vssid=mosaic">link</a>')
+</script><br>
+<hr>
+bài 7:Nhập vào tên, in ra tên <br>
+<input type="text" id="sooo dau" placeholder="nhập tên của bạn vào">
+<button onclick="hiihi()">click</button>
+<p id="ket oqua"></p>
+<script>
+    function hiihi() {
+        let a = document.getElementById('sooo dau').value;
+        document.getElementById('ket oqua').innerHTML ='tên của bạn là:' + a
+    }
+</script><br><hr>
+bài 8: Nhập vào a, in ra bình phương của a <br>
+<input type="text" id="so thu hai" placeholder="nhập a để tính bình phương">
+<button onclick="hoho()">click</button>
+<p id="ket qua2"></p>
+<script>
+    let b = 0;
+    function hoho() {
+        let a = document.getElementById('so thu hai').value;
+        if(a * a){
+            b = (a * a)
+            document.getElementById('ket qua2').innerHTML = 'bình phương là: ' + b
+        }
+    }
+</script><br><hr>
+bài 9: Nhập vào tên, in ra tên với h1 <br>
+<input type="text" id="so thu ba" placeholder="nhập tên của bạn vào">
+<button onclick="haha()">click</button>
+<p id="ket qua3"></p>
+<script>
+    function haha() {
+        let a = document.getElementById('so thu ba').value;
+        document.getElementById('ket qua3').innerHTML = 'tên của bạn là: ' + '<h1>' + a + '</h1>'
+    }
+</script><br><hr>
+bài 10:Nhập vào đường dẫn cho biến src, in ra ảnh với nguồn ảnh là biến src<br>
+<p>nhấn vào ảnh đi <3</p><br>
+<a href=" https://www.google.com.vn/search?q=%E1%BA%A3nh+ng%E1%BA%A7u&udm=2#vhid=tqgRJGYJ48UjQM&vssid=mosaic "><img style="width: 100px; height: 100px;" src="https://cf.shopee.vn/file/49527b76231b77a07c79f5203c584bdb"></a>
+<br><hr>
+bài 11: Nhập vào tuổi trong biến age, in ra 'Đủ tuổi' nếu age>18<br>
+<input type="text" id="so thu tu" placeholder="nhập tuổi của bạn vào">
+<button onclick="haa()">click</button>
+<p id="ket qua4"></p>
+<script>
+    function haa() {
+        let a = document.getElementById('so thu tu').value;
+        if(a > 18){
+            document.getElementById('ket qua4').innerHTML = 'đủ tuổi'
+        }else{
+            document.getElementById('ket qua4').innerHTML = 'thiếu tuổi'
+        }
+    }
+</script><br><hr>
+bài 12: Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ <br>
+<input type="text" id="so thu nam" placeholder="nhập số vào">
+<button onclick="hii()">click</button>
+<p id="ket qua5"></p>
+<script>
+    function hii() {
+        let a = document.getElementById('so thu nam').value;
+        if(a %2 === 0){
+            document.getElementById('ket qua5').innerHTML = 'hello'
+        }if(a%2 !== 0){
+            document.getElementById('ket qua5').innerHTML = 'hi'
+        }
+    }
+</script><br><hr>
+bài 13: Nhập vào a, b. Nếu a>b in ra tổng, nếu a nhỏ hơn b in ra tích, nếu a =b in ra 'Hihi' <br>
+<input type="number" id="so thu sau" placeholder="nhập a">
+<input type="number" id="so thu bay" placeholder="nhập b">
+<button onclick="hh12()">click</button>
+<p id="ket qua6"></p>
+<script>
+    function hh12() {
+        let a = document.getElementById('so thu sau').value;
+        let b = document.getElementById('so thu bay').value;
+        let tong = 0;
+        let tich = 1;
+        if(a>b){
+           tong += a*1 + b*1
+            document.getElementById('ket qua6').innerHTML = 'tổng là: ' + tong;
+        }if(a<b){
+          tich *= a*1 * b*1;
+            document.getElementById('ket qua6').innerHTML = 'tích là: ' + tich;
+        }if(a === b){
+            document.getElementById('ket qua6').innerHTML = 'hihi';
+        }
+    }
+</script><br><hr>
+bài 14: Nhập a,b,c. In ra số lớn nhất <br>
+<input type="number" id="so thu tam" placeholder="nhap a">
+<input type="number" id="so thu chin" placeholder="nhap b">
+<input type="number" id="so thu muoi" placeholder="nhap c">
+<button onclick="aaa()">click</button>
+<p id="ket qua7"></p>
+<script>
+    function aaa() {
+        let a = document.getElementById('so thu tam').value;
+        let b = document.getElementById('so thu chin').value;
+        let c = document.getElementById('so thu muoi').value;
+        let max = Math.max(a, b,c);
+        document.getElementById('ket qua7').innerHTML = 'số lớn nhất là: ' + max
+    }
+</script><br><hr>
+bài 15: In ra 100 chữ 'Hello'<br>
+<script>
+    let a = 0;
+    while (a <= 100){
+        document.write('<br>' + 'hello'  )
+        a++;
+    }
+</script><br><hr>
+bài 16: Nhập vào N từ prompt. In ra N lần chữ 'Hello' <br>
+<p style="color: chartreuse">nhấn vào click rồi nhập số đi nó sẽ in ra trong phần console.log</p>
+<button style="color:blue" onclick="bbb()">click</button>
+<script>
+    function bbb() {
+        let N = parseInt(prompt("Nhập vào số N:"));
+        if ( N > 0) {
+            for (let i = 0; i < N; i++) {
+                console.log('Hello');
+            }
+        } else {
+            console.log('Vui lòng nhập một số hợp lệ.');
+        }
+    }
+</script><br><hr>
+bài 17: In ra cac số từ 1 đến 1000;<br>
+<p id="ket qua8"></p>
+<script>
+    for (let i = 1; i <= 1000; i++) {
+       document.write('<br>' + i)
+    }
+</script><br><hr>
+bài 18: In ra cac số từ a đến b;<br>
+<input type="number" id="so thu zxc" placeholder="nhap a">
+<input type="number" id="so thu cxz" placeholder="nhap b">
+<button onclick="bbab()">click</button>
+<p id="ke qua9"></p>
+<script>
+    function bbab() {
+        let a = document.getElementById('so thu zxc').value;
+        let b = document.getElementById('so thu cxz').value;
+        let dem = '';
+        if(a && b > 0){
+            for (let i = a; i <= b; i++) {
+                dem +='<br>' + i
+                document.getElementById('ke qua9').innerHTML ='các số từ a đến b là: ' +  dem
+            }
+        }
+    }
+</script><br><hr>
+bài 19: In ra cac số từ a đến b, mỗi số trong 1 thẻ h1<br>
+<input type="number" id="so thu d" placeholder="nhap a">
+<input type="number" id="so thu f" placeholder="nhap b">
+<button onclick="bba()">click</button>
+<p id="ket qu9"></p>
+<script>
+    function bba() {
+        let a = document.getElementById('so thu d').value;
+        let b = document.getElementById('so thu f').value;
+        let dem = '';
+        if(a && b > 0){
+            for (let i = a; i <= b; i++) {
+                dem +='<br>' + '<h1>'+  i + '</h1>'
+                document.getElementById('ket qu9').innerHTML ='các số từ a đến b là: ' +  dem
+            }
+        }
+    }
+</script><br><hr>
+bài 20: In ra các số chẵn tu a đến b<br>
+<input type="text" id="so112 " placeholder="nhập vào a">
+<input type="text" id="so221 " placeholder="nhập vào b">
+<button onclick="iihihi()">click</button>
+<p id=" uuqua"></p>
+<script>
+    function iihihi() {
+        let a = document.getElementById('so112 ').value;
+        let b = document.getElementById('so221 ').value;
+        let dem = '';
+        if (!isNaN(a) && !isNaN(b)) {
+            for (let i = a; i <= b; i++) {
+                if (i % 2 === 0) {
+                    dem +='<br>' + i
+                    document.getElementById(' uuqua').innerHTML ='các số chẵn của a và b là: ' + '<br>' + dem
+                }
+            }
+        }
+
+    }
+</script><br><hr>
+bài 21: In ra các số từ a đến b số chẵn trong h2, so le trong h1;<br>
+<input type="number" id="so dau tieen" placeholder="nhap vao a">
+<input type="number" id="so thu haii" placeholder="nhap vao b">
+<button onclick="hihi()">click</button>
+<p id=" quaaa"></p>
+<p id="ketqua"></p>
+<script>
+    function hihi() {
+        let a = +document.getElementById('so dau tieen').value
+        let b = +document.getElementById('so thu haii').value
+        let dem = '';
+        let dem2 = '';
+        for (let i = a; i <= b; i++) {
+            if (i % 2 === 0) {
+                dem += '<br>' + i
+                document.getElementById('ketqua').innerHTML = 'so chan in ra h2 la: ' + '<h2>' + dem + '</h2>'
+            }
+            if (i % 2 !== 0) {
+                dem2 += '<br>' + i
+                document.getElementById(' quaaa').innerHTML = 'so le in ra h1 la: ' +  '<h1>' + dem2 + '</h1>'
+            }
+        }
+
+    }
+</script><br><hr>
+bài 22: Tính tích, Tính Tổng các số chia 5 dư 2 từ a đến b ------- <br>
+<input type="number" id="dau tien" placeholder="nhập vào a">
+<input type="number" id="dau thu hai" placeholder="nhập vào b">
+<button onclick="abc()">click</button>
+<p id="abcd"></p>
+<p id="qwe"></p>
+<p id="qaz"></p>
+<script>
+    function abc() {
+        let a = +document.getElementById('dau tien').value;
+        let b = +document.getElementById('dau thu hai').value;
+        let tong = 0;
+        let chia =1;
+        let dem = '';
+        for (let i = a; i <= b; i++) {
+            if( i % 5 !== 0){
+                tong += i;
+                dem +='<br>' + i
+                chia *= i;
+            }
+        }
+        document.getElementById('qwe').innerHTML = 'các số là: ' + dem
+        document.getElementById('qaz').innerHTML = 'tổng là: ' + tong
+        document.getElementById('abcd').innerHTML = 'tích là: ' + chia
+    }
+</script><br><hr>
+bài 23:Đếm các số chia 5 dư 2 từ a đến b<br>
+<input type="number" id="dau dau" placeholder="nhập vào a">
+<input type="number" id="dau thuu hai" placeholder="nhập vào b">
+<button onclick="abccc()">click</button>
+<p id="accd"></p>
+<script>
+    function abccc() {
+        let a = +document.getElementById('dau dau').value;
+        let b = +document.getElementById('dau thuu hai').value;
+        let dem = '';
+        for (let i = a; i <= b; i++) {
+            if( i % 2 !== 0 && i% 5 !== 0){
+                dem +='<br>' + i;
+            }
+        }
+        document.getElementById('accd').innerHTML = 'đếm các dư là: ' + dem
+    }
+    </script><br><hr>
+bài 24: In ra các phần tử trong mảng <br>
+<button onclick="ukuk()">click</button>
+<p id="ket123"></p>
+<script>
+    function ukuk() {
+        let dem ='';
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                dem +='<br>' + a[i][j]
+
+            }
+        }
+        document.getElementById('ket123').innerHTML = 'các số trong mảng là: ' + dem
+    }
+</script><br><hr>
+bài 25: In ra các phần tử chẵn trong mảng <br>
+<button onclick="ukukkkk()">click</button>
+<p id="ket12345"></p>
+<script>
+    function ukukkkk() {
+        let dem2 = '';
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if(a[i][j] % 2 === 0){
+                    dem2 += '<br>' + a[i][j];
+                }
+            }
+        }
+        document.getElementById('ket12345').innerHTML = 'các số chẵn trong mảng là: ' + dem2
+    }
+</script><br><hr>
+bài 26: In ra các phần số chẵn trong h2, le trong h1; <br>
+<button onclick="wer()">click</button>
+<p id="ket123456"></p>
+<p id="123456"></p>
+<script>
+    function wer() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let dem2 = '';
+        let dem = '';
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if(a[i][j] % 2 === 0){
+                    dem2 += '<br>' + a[i][j];
+                }if(a[i][j] %2 !== 0){
+                    dem +='<br>' + a[i][j];
+                }
+            }
+        }
+        document.getElementById('ket123456').innerHTML = 'các số lẻ trong mảng là: ' + '<h1>' + dem + '</h1>'
+        document.getElementById('123456').innerHTML = 'các số chẵn trong mảng là: ' + '<h2>' + dem2 + '</h2>'
+    }
+</script><br><hr>
+bài 27: Tính tích các phần tử.<br>
+<button onclick="wero()">click</button>
+<p id="090909"></p>
+<script>
+    function wero() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let tich = 1;
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] > 0) {
+                    tich *= a[i][j];
+                }
+            }
+        }
+        document.getElementById('090909').innerHTML = 'tích của tất cả phần tử là: ' + tich
+    }
+</script><br><hr>
+bài 28: Tính tích các phần tử chẵn<br>
+<button onclick="weroo()">click</button>
+<p id="09090909"></p>
+<script>
+    function weroo() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let tich = 1;
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] % 2 !== 0) {
+                    tich *= a[i][j];
+                }
+            }
+        }
+        document.getElementById('09090909').innerHTML = 'tích của tất cả phần tử chẵn là: ' + tich
+    }
+</script><br><hr>
+bài 29: Tính Tổng các phần tử.<br>
+<button onclick="werooo()">click</button>
+<p id="0909090909"></p>
+<script>
+    function werooo() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let tong = 0;
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] > 0) {
+                    tong += a[i][j];
+                }
+            }
+        }
+        document.getElementById('0909090909').innerHTML = 'tổng của tất cả phần tử là: ' + tong
+    }
+</script><br><hr>
+bài 30: Tính Tổng các phần tử chẵn<br>
+
+<button onclick="weroooo()">click</button>
+<p id="090909090909"></p>
+<script>
+    function weroooo() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let tong = 0;
+        let dem = '';
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j]% 2 === 0) {
+                    tong += a[i][j];
+                }
+            }
+        }
+        document.getElementById('090909090909').innerHTML = 'tổng của tất cả phần tử chẵn là: ' + tong
+    }
+</script><br><hr>
+bài 31: Tìm max trong mảng.<br>
+<button onclick="werooooo()">click</button>
+<p id="0909090909099"></p>
+<script>
+    function werooooo() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let max = a[0][0]
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j]> max) {
+                    max = a[i][j];
+                }
+            }
+        }
+        document.getElementById('0909090909099').innerHTML = 'số lớn nhất trong mảng  là: ' + max
+    }
+</script><br><hr>
+bài 32: Tìm max của các phần tử chẵn trong mảng<br>
+<button onclick="weroooooo()">click</button>
+<p id="09090909090991"></p>
+<script>
+    function weroooooo() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let max = a[0][0]
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] % 2 ===0 ) {
+                    max = a[i][j];
+                }
+            }
+        }
+        document.getElementById('09090909090991').innerHTML = 'số chắn lớn nhất trong mảng  là: ' + max
+    }
+</script><br><hr>
+bài 33: Đếm có  bao nhiêu phần tử chia 5 có dư trong mảng<br>
+<button onclick="werooooou()">click</button>
+<p id="09090909090992"></p>
+<script>
+    function werooooou() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let dem ='';
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] % 5 !==0 ) {
+                    dem += '<br>' + a[i][j]
+                }
+            }
+        }
+        document.getElementById('09090909090992').innerHTML = 'các phần tử chia 5 có dư là: ' + dem
+    }
+</script><br><hr>
+bài 34: Nhap vào a, đếm số lượng a trong mảng.<br>
+<input type="number" id="123" placeholder="">
+<button onclick="weroooouu()">click</button>
+<p id="09090909090993"></p>
+<script>
+    function weroooouu() {
+        let a =[];
+        let b = +document.getElementById('123').value;
+        for (let i = 1; i <= b; i++) {
+            let dem = +document.getElementById('123').value + i
+            a.push(dem)
+        }
+        document.getElementById('09090909090993').innerHTML = 'phần tử là: ' + a
+    }
+</script><br><hr>
+bài 35: Nhap vao a, tim vi tri cua a trong mảng.<br>
+<p>kiểm tra vị trí 12,13,14,15,16,17,18,19,20,21,22,23 trong mảng </p>
+<input type="number" id="097" placeholder="nhap x">
+<button onclick="weroooee()">click</button>
+<p id="0909090909123"></p>
+<script>
+    function weroooee() {
+        let a =[
+            [12,13,14,15],
+            [16,17,18,19],
+            [20,21,22,23],
+        ];
+        let b = document.getElementById('097').value;
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (a[i][j] == b) {
+                    document.getElementById('0909090909123').innerHTML = 'vị trí của x trong mảng lá: ' + i + ', ' + j + '<br>'
+                }
+            }
+        }
+
+    }
+</script><br><hr>
+</body>
+</html>
